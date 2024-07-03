@@ -1,6 +1,6 @@
 import { cookies } from "../store"
 
-const baseUrl = 'https://lemonlive.deno.dev/api/'
+const baseUrl = 'https://khfgytdgg.deno.dev/api/'
 // const baseUrl = 'http://localhost:8000/api/'
 
 export const useSiteFetch = (id: siteId, method: LiveSiteMethod, params: QueryParams = {}) => {
@@ -19,7 +19,7 @@ export const useCheckFollows = async (site: site) => {
           site.follows[id].status = data[id].status
         })
       )
-    }) 
+    })
   }
 
   await useSiteFetch(site.id, 'getLiveStatus', { id: ids.join(',') }).then(data =>
